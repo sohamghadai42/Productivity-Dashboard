@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productivity Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <section class="allElems">
+        <div class="nav">
+          <div class="nav-in">
+            <h2>Productivity Dashboard</h2>
+          </div>
+          <div class="changetheme">
+            <button>Change Theme</button>
+          </div>
+        </div>
+        <header>
+          <div class="header-1">
+            <h3 class="date">20 January, 2026</h3>
+            <h2>Saturday, 1:00pm</h2>
+            <h3>Noida (UP)</h3>
+          </div>
+          <div class="header-2">
+            <h2>23°C</h2>
+            <h3>Clear</h3>
+            <h4 class="feels">Feels Like: 1°C</h4>
+            <h4 class="humidity">Humidity: 31%</h4>
+            <h4 class="wind">Wind: 8 km/h</h4>
+          </div>
+        </header>
+        <div class="allfeatures">
+          <div class="todo elem" id="0">
+            <img
+              src="https://images.pexels.com/photos/6962089/pexels-photo-6962089.jpeg"
+              alt=""
+            />
+            <h2>To Do List</h2>
+          </div>
+          <div class="daily elem" id="1">
+            <img
+              src="https://images.pexels.com/photos/911059/pexels-photo-911059.jpeg"
+              alt=""
+            />
+            <h2>Daily Planner</h2>
+          </div>
+          <div class="motivation elem" id="2">
+            <img
+              src="https://images.pexels.com/photos/15246409/pexels-photo-15246409.jpeg"
+              alt=""
+            />
+            <h2>Motivation</h2>
+          </div>
+          <div class="pomo elem" id="3">
+            <img
+              src="https://images.pexels.com/photos/6976596/pexels-photo-6976596.jpeg"
+              alt=""
+            />
+            <h2>Pomodoro</h2>
+          </div>
+          <div class="goals elem" id="4">
+            <img
+              src="https://images.pexels.com/photos/6913329/pexels-photo-6913329.jpeg"
+              alt=""
+            />
+            <h2>Daily Goals</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="fullElems todo-fullpage">
+        <button class="back" id="0">Close</button>
+        <h2>Your Personalized Task Board</h2>
+        <div class="todo-container">
+          <div class="addtask">
+            <form>
+              <input id="task-inp" placeholder="Enter Task" type="text" />
+              <textarea
+                id="task-details"
+                placeholder="Enter Details"
+                name=""
+                id=""
+              ></textarea>
+              <div class="checkbox">
+                <input type="checkbox" name="" id="check-box" />
+                <label for="check">Mark as important!</label>
+              </div>
+              <button id="btn-task">Add Task</button>
+            </form>
+          </div>
+          <div class="alltask"></div>
+        </div>
+      </section>
+      <section class="fullElems daily-fullpage">
+        <button class="back" id="1">Close</button>
+        <h2>Plan Your Day</h2>
+        <div class="day-planner"></div>
+      </section>
+      <section class="fullElems motivation-fullpage">
+        <button class="back" id="2">Close</button>
+        <h2>Quote of the day</h2>
+        <div class="motivation-container">
+          <div class="quote-left" id="1">
+            <img
+              width="100"
+              height="100"
+              src="https://img.icons8.com/clouds/100/quote-left.png"
+              alt="quote-left"
+            />
+          </div>
+          <div class="motivation-wrapper">
+            <div class="motivation-1">
+              <h1></h1>
+            </div>
+            <div class="motivation-2">
+              <h3></h3>
+            </div>
+          </div>
+          <div class="quote-right" id="2">
+            <img
+              width="100"
+              height="100"
+              src="https://img.icons8.com/clouds/100/quote-left.png"
+              alt="quote-right"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="fullElems pomo-fullpage">
+        <button class="back" id="3">Close</button>
+        <h2>Pomodoro Timer</h2>
+        <div class="boxeskacontainer">
+          <div class="box-container">
+            <div class="timer box">Pomodoro</div>
+            <div class="short-break box">Short Break</div>
+            <div class="long-break box">Long Break</div>
+            <div class="anchor"></div>
+          </div>
+        </div>
+        <div class="pomo-timer">
+          <h1>25:00</h1>
+          <button class="start">Start</button>
+          <button class="pause">Pause</button>
+          <button class="reset">Reset</button>
+        </div>
+      </section>
+      <section class="fullElems goals-fullpage">
+        <button class="back" id="4">Close</button>
+        <h1>Daily Goals</h1>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,554 @@
+:root {
+  --pri: #fcf9ea;
+  --sec: #badfdb;
+  --tri1: #ffa4a4;
+  --tri2: #ffbdbd;
+  --tri3: #feeac9;
+  --tri3-2: #ebd6b7;
+  --tri4: #fd7979;
+  --red: red;
+  --black: black;
+  --white: white;
+  --green: green;
+  --transparent: rgba(0, 0, 0, 0.132);
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./AeonikTRIAL-Regular.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 300;
+  src: url(./AeonikTRIAL-Light.otf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./AeonikTRIAL-Bold.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
+}
+#main .allElems {
+  height: 100%;
+  width: 100%;
+  padding: 10px 25px;
+  padding-top: 20px;
+  background-color: var(--tri2);
+  position: absolute;
+}
+#main .allElems .allfeatures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#main .allElems .elem {
+  box-shadow: 3px 3px 2px var(--black);
+  height: 280px;
+  width: 270px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+#main .allElems .elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+#main .allElems .elem h2 {
+  position: absolute;
+  font-family: "aeonik";
+  font-weight: 700;
+  font-size: 2rem;
+  right: 15px;
+  bottom: 20px;
+  color: var(--tri3);
+}
+#main .fullElems {
+  padding: 30px;
+  height: 100%;
+  width: 100%;
+  background-color: var(--tri1);
+  display: none;
+  position: absolute;
+}
+#main .fullElems .back {
+  position: absolute;
+  right: 5%;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--red);
+  transition: all ease 0.2s;
+}
+#main .fullElems .back:active {
+  scale: 0.97;
+}
+
+.elem:active {
+  scale: 0.97;
+}
+
+.todo-fullpage h2 {
+  font-size: 3rem;
+  font-family: "aeonik";
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 2px 0px 5px var(--black);
+}
+.todo-fullpage .todo-container {
+  margin-top: 30px;
+  height: 80%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.todo-fullpage .todo-container .addtask {
+  height: 100%;
+  width: 35%;
+  background-color: var(--tri3);
+  border-radius: 10px;
+  overflow: auto;
+}
+.todo-fullpage .todo-container .addtask form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px;
+  gap: 30px;
+}
+.todo-fullpage .todo-container .addtask form #task-inp {
+  background-color: var(--pri);
+  padding: 15px 30px;
+  width: 100%;
+  border: none;
+  font-size: 1.3rem;
+  font-family: "aeonik";
+  border-radius: 10px;
+  outline: none;
+}
+.todo-fullpage .todo-container .addtask form textarea {
+  background-color: var(--pri);
+  padding: 15px 30px;
+  width: 100%;
+  border: none;
+  font-size: 1.3rem;
+  font-family: "aeonik";
+  border-radius: 10px;
+  outline: none;
+}
+.todo-fullpage .todo-container .addtask form #btn-task {
+  padding: 15px 30px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--tri4);
+  color: var(--pri);
+  font-size: 1.2rem;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.todo-fullpage .todo-container .addtask form #btn-task:active {
+  scale: 0.97;
+}
+.todo-fullpage .todo-container .addtask form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px 0px;
+  width: 100%;
+}
+.todo-fullpage .todo-container .addtask form .checkbox input {
+  scale: 1.6;
+}
+.todo-fullpage .todo-container .addtask form .checkbox label {
+  font-size: 1.2rem;
+  font-family: "aeonik";
+  font-weight: 500;
+}
+.todo-fullpage .todo-container .addtask::-webkit-scrollbar {
+  display: none;
+}
+.todo-fullpage .todo-container .alltask {
+  height: 100%;
+  width: 65%;
+  border-radius: 10px;
+  background-color: var(--tri3);
+  padding: 30px;
+  overflow: auto;
+}
+.todo-fullpage .todo-container .alltask .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: var(--pri);
+  margin-bottom: 15px;
+}
+.todo-fullpage .todo-container .alltask .task h5 {
+  font-size: 1.2rem;
+  font-family: "aeonik";
+  font-weight: 600;
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+}
+.todo-fullpage .todo-container .alltask .task h5 .true {
+  background-color: red;
+  border-radius: 50px;
+  font-size: 9px;
+  color: var(--pri);
+  padding: 4px 6px;
+}
+.todo-fullpage .todo-container .alltask .task h5 .false {
+  display: none;
+}
+.todo-fullpage .todo-container .alltask .task button {
+  background-color: var(--green);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-family: "aeonik";
+  color: var(--pri);
+  cursor: pointer;
+}
+.todo-fullpage .todo-container .alltask::-webkit-scrollbar {
+  display: none;
+}
+
+.daily-fullpage h2 {
+  font-size: 3rem;
+  font-family: "aeonik";
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 2px 0px 5px var(--black);
+}
+.daily-fullpage .day-planner {
+  background-color: var(--tri3);
+  height: 85%;
+  width: 100%;
+  margin-top: 30px;
+  border-radius: 10px;
+  padding: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  overflow: auto;
+}
+.daily-fullpage .day-planner .planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+}
+.daily-fullpage .day-planner .planner-time input {
+  padding: 20px 45px;
+  width: 100%;
+  background-color: var(--sec);
+  border-radius: 5px;
+  border: none;
+  font-size: 30px;
+  padding-top: 32px;
+  outline: none;
+  font-family: "aeonik";
+  margin-bottom: 15px;
+}
+.daily-fullpage .day-planner .planner-time p {
+  color: var(--black);
+  font-family: "aeonik";
+  position: absolute;
+  top: 10%;
+  left: 2%;
+}
+.daily-fullpage .day-planner::-webkit-scrollbar {
+  display: none;
+}
+
+.motivation-fullpage h2 {
+  font-size: 3rem;
+  font-family: "aeonik";
+  font-weight: 700;
+  color: var(--white);
+  text-shadow: 2px 0px 3px var(--black);
+}
+.motivation-fullpage .motivation-container {
+  margin-top: 20px;
+  height: 60%;
+  width: 70%;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.motivation-fullpage .motivation-container .motivation-wrapper {
+  background-color: var(--pri);
+  border-radius: 20px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 8;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.motivation-fullpage .motivation-container .motivation-wrapper .motivation-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+.motivation-fullpage .motivation-container .motivation-wrapper .motivation-1 h1 {
+  font-size: 3rem;
+  color: var(--tri1);
+  font-family: "aeonik";
+  font-weight: 600;
+}
+.motivation-fullpage .motivation-container .motivation-wrapper .motivation-2 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.motivation-fullpage .motivation-container .motivation-wrapper .motivation-2 h3 {
+  font-size: 2rem;
+  color: #fd7979;
+  font-family: "aeonik";
+  font-weight: 600;
+}
+.motivation-fullpage .motivation-container::after {
+  content: "";
+  border-radius: 20px;
+  background-color: var(--tri3-2);
+  height: 100%;
+  width: 101%;
+  position: absolute;
+  z-index: 1;
+  rotate: -10deg;
+  filter: blur(3px);
+}
+.motivation-fullpage .quote-left {
+  position: absolute;
+  top: -12%;
+  right: 90%;
+  z-index: 10;
+}
+.motivation-fullpage .quote-right {
+  position: absolute;
+  top: 89%;
+  right: 1%;
+  z-index: 12;
+  rotate: 180deg;
+}
+
+.pomo-fullpage h2 {
+  font-size: 3rem;
+  font-family: "aeonik";
+  font-weight: 700;
+  color: var(--tri3);
+  text-shadow: 2px 0px 3px var(--black);
+}
+.pomo-fullpage .pomo-timer {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pomo-fullpage .pomo-timer h1 {
+  color: var(--tri4);
+  font-size: 7rem;
+  font-family: "aeonik";
+  font-weight: 700;
+}
+.pomo-fullpage .pomo-timer button {
+  margin-top: 20px;
+  padding: 10px 40px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  font-family: "aeonik";
+  background-color: var(--tri3);
+  border: none;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: 4px 4px 0px var(--black);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.pomo-fullpage .pomo-timer button:active {
+  box-shadow: 0px 0px 0px black;
+}
+
+.boxeskacontainer {
+  display: flex;
+  background-color: var(--sec);
+  position: absolute;
+  top: 29%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+.boxeskacontainer .box-container {
+  anchor-name: --some-name;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border: 2px solid var(--black);
+  padding: 20px 40px;
+  box-shadow: 4px 4px 0px var(--black);
+  border-radius: 10px;
+}
+.boxeskacontainer .box-container .box {
+  font-family: "aeonik";
+  font-weight: 600;
+  font-size: 1.2rem;
+  border: 1px solid var(--black);
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px var(--black);
+  background-color: var(--tri4);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.boxeskacontainer .box-container .anchor {
+  position: absolute;
+  padding: 25px 50px;
+  border-radius: 10px;
+  background-color: var(--transparent);
+  position-anchor: --some-name;
+  top: anchor(top);
+  left: anchor(left);
+  right: anchor(right);
+  bottom: anchor(bottom);
+  pointer-events: none;
+  mix-blend-mode: normal;
+  transition: all ease 0.4s;
+}
+.boxeskacontainer .box-container .box:hover {
+  anchor-name: --some-name;
+}
+.boxeskacontainer .box-container .box:active {
+  scale: 0.95;
+  box-shadow: 0px 0px 0px black;
+}
+
+header {
+  height: 280px;
+  width: 100%;
+  background-color: var(--pri);
+  margin-bottom: 25px;
+  border-radius: 10px;
+  padding: 50px;
+  color: var(--tri3);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "aeonik";
+  background: url(https://i.pinimg.com/1200x/0d/34/f3/0d34f36f3fabd23d73a5593eb59f2c63.jpg);
+  background-size: cover;
+  background-position: center;
+}
+header .header-1 .date {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+header .header-1 h2 {
+  font-size: 3.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+header .header-1 h3 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+header .header-2 h4 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+header .header-2 h3 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+}
+header .header-2 h2 {
+  font-weight: 600;
+  font-size: 3.8rem;
+}
+
+.nav {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--tri3);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px 30px;
+}
+.nav .nav-in h2 {
+  font-size: 1.7rem;
+  font-family: "aeonik";
+  font-weight: 600;
+  color: var(--tri4);
+  pointer-events: none;
+}
+.nav .changetheme {
+  display: flex;
+  align-items: flex-start;
+}
+.nav .changetheme button {
+  padding: 10px 20px;
+  background-color: var(--sec);
+  font-size: 1.3rem;
+  font-family: "aeonik";
+  font-weight: 600;
+  color: var(--black);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px var(--black);
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+.nav .changetheme button:active {
+  scale: 0.97;
+  box-shadow: 0px 0px 0px var(--black);
+}/*# sourceMappingURL=style.css.map */
