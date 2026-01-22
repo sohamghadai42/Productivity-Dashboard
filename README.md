@@ -53,6 +53,8 @@ git clone [https://github.com/sohamghadai42/Productivity-Dashboard.git]
 
 **Tip:** Use the default theme for the best visual experience while I work on improving the color options!
 
+## LIVE LINK: [https://sohamghadai42.github.io/Productivity-Dashboard/] => THIS PAGE IS TOTALY SAFE. DON'T KNOW WHY THE CHROME SAYING DENGOREOUS SITE.
+
 ##  Future Improvements
 
 -  Better color palettes for theme switcher
